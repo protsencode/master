@@ -13,13 +13,12 @@ import org.testng.annotations.BeforeSuite;
 abstract public class TestBase {
     WebDriver driver = new FirefoxDriver();
     HomePage page = new HomePage();
-
+    SearchPage search = new SearchPage();
 
     @BeforeSuite
     public void loadThisWebsite() {
         driver.manage().window().maximize();
-        driver.get("http://www.google.com");
-
+        driver.get(page.BASIC_URL);
     }
 
     @AfterSuite
