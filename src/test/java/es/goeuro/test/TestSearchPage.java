@@ -10,7 +10,33 @@ import java.util.List;
  * Created by protsencode on 12/19/15.
  */
 
-public class Test2SearchPage extends TestBase {
+public class TestSearchPage extends TestBase {
+
+    @Test(priority = 1)
+    public void correctUrl() {
+        log.info("Test 1 starts: Checks that BASIC_URL is correct");
+        try {
+            String expectedUrl = driver.getCurrentUrl();
+            Assert.assertEquals(expectedUrl, page.BASIC_URL);
+            log.info("Test Passed");
+        }catch (AssertionError ar){
+            log.error(ar);
+            Assert.fail();
+        }
+    }
+
+    @Test(priority = 2)
+    public void correctTitle() {
+        log.info("Test 2 starts: Checks that TITLE is correct");
+        try {
+            String expectedTitle = driver.getTitle();
+            Assert.assertEquals(expectedTitle, page.TITLE);
+            log.info("Test Passed");
+        } catch (AssertionError ar){
+            log.error(ar);
+            Assert.fail();
+        }
+    }
 
     @Test(priority = 3)
     public void searchPageIsOpened() {
@@ -82,6 +108,6 @@ public class Test2SearchPage extends TestBase {
 
 
 
-        private static final Logger log = Logger.getLogger(Test2SearchPage.class);
+        private static final Logger log = Logger.getLogger(TestSearchPage.class);
 }
 

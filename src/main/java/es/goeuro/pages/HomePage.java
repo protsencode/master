@@ -17,8 +17,8 @@ public class HomePage {
     public String BASIC_URL = "http://www.goeuro.es/";
     public String FROM_FILTER = "#from_filter";
     public String TO_FILTER = "#to_filter";
-    public String PLACE_FROM = "madrid";
-    public String PLACE_TO = "barcelona";
+    public String PLACE_FROM = "berlin";
+    public String PLACE_TO = "prag";
 
 
     public void waitForElement(WebDriver driver, String cssSelector, int time) {
