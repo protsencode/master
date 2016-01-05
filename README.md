@@ -21,11 +21,11 @@ FireFox browser 41.0
 Java 1.8
 
 
----------------STRUCTURE----------------------------------------------------------------
+---------------STRUCTURE---------------------
 
 src\main\java\es\goeuro\pages - the classes which describe the the pages of target site: HomePage.java, Page.java, SearchPage.java
 
-src\test\java\es\goeuro\test - here classes BaseTest.java, BaseTest.java with tests
+src\test\java\es\goeuro\test - here classes TestBase.java, TestSearchPage.java with tests
 
 For each item  was done the separated test.
 
@@ -33,7 +33,7 @@ In sum: 6 test:
 5 - passed,
 1 failed (For Sorting by price for bus Was not considered "Alternative Dates" feature which impact on test results)
 
---------------- RUN -----------------------------------------------------------------------
+--------------- RUN ---------------------------
 
 ----------------ATTENTION----------------------------
 - Required installed Java 1.8 and Maven 3           -
@@ -55,7 +55,7 @@ Or just run via your IDE
 
 For fetching the all necessary libraries, You need to run pom.xml in any IDE.
 
----------------Reports ----------------------------------------------------------------------
+---------------Reports --------------------------------
 
 Reports are implemented using Maven plugins:
  - Maven Surefire Report Plugin
